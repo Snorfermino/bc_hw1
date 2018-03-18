@@ -94,14 +94,11 @@ contract Lotto {
 
     // generate the Winner
     function generateWinner() public {
-        require(owner == msg.sender);
-        // determine the Winner
+
         uint winningNumber = random(); // selected at random
 
-        // (count,winners) = checkWinnerExist(winningNumber);
-        // if (count > 0) {
             distributePrizes(winningNumber);
-        // }
+
     }
 
     function checkWinnerExist(uint winningNumber) private returns (uint,address[]) {
