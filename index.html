@@ -1,0 +1,53 @@
+<!doctype>
+<html>
+
+<head>
+    <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <h1>Voting Contract</h1>
+    <h4>Total Bets:
+        <strong id="totalBet"></strong>
+    </h4>
+    <h4>Total Ether: 
+            <strong id="totalEther"></strong>
+    </h4>
+    <h4>Minimum Bet Amount: 
+            <strong id="minBet"></strong>
+    </h4>
+    <h4>Maximum Bets: 
+            <strong id="maxBet"></strong>
+    </h4>
+    <hr>
+    <div id="code"></div>
+    <div id="status"></div>
+    <div id='call'>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Number: </td>
+                    <td>
+                        <input type="number" id="number" placeholder="Number from 1 to 10"></input>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>Ether: </td>
+                    <td>
+                        <input type="number" id="value" placeholder="Amount Bet"></input>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" onClick="callPickNumber()">Pick Number</button>
+        <!-- <button type="button" onClick="generateWinner()">Annouce Winner</button> -->
+    </div>
+    <div id="result" > </div>
+    <div id="winAmount"> </div>
+</body>
+
+</html>
